@@ -87,6 +87,7 @@ resource "aws_cloudfront_distribution" "default" {
     cached_methods   = ["GET", "HEAD"]
     target_origin_id = "default"
     compress         = true
+    response_headers_policy_id = var.default_cache_behavior_response_headers_id
 
     forwarded_values {
       query_string = true

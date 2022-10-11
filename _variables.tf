@@ -63,6 +63,12 @@ variable "cloudfront_origin_read_timeout" {
   description = "The amount of time, in seconds, that CloudFront waits for a response from a custom origin. The value applies both to the time that CloudFront waits for an initial response and the time that CloudFront waits for each subsequent packet. Valid values are from 4 to 60 seconds."
 }
 
+variable "default_cache_behavior_response_headers_id" {
+  type        = string
+  default     = null
+  description = "Sets the response headers policy of the default cache behaviour"
+}
+
 variable "alarm_cloudfront_500_errors_threshold" {
   default     = 5
   description = "Cloudfront 500 Errors rate threshold (use 0 to disable this alarm)"
